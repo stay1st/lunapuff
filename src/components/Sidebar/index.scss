@@ -107,6 +107,13 @@
             }
         }
 
+        a.portfolio-link {
+            &:after {
+                content: 'PORTFOLIO';
+                font-weight: 400;
+            }
+        }
+
         a.active svg {
             color: #00ffc2;
         }
@@ -138,6 +145,114 @@
                     color: #0090d4;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hamburger-mobile-fa {
+        display: none;
+        color: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .nav-bar {
+        position: intial;
+        background: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        width: auto;
+        height: auto;
+        min-height: auto;
+
+        ul,
+        nav,
+        .lgrey-div {
+            display: none;
+        }
+
+        nav {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            margin: 0;
+            background: rgba(81, 9, 109, 0.628);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(10px);
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10px;
+            }
+
+            a {
+                color: #fff;
+            }
+
+            a svg {
+                opacity: 1 !important;
+                color:#fff;
+            }
+
+            &.show-menu {
+                display: block;
+            }
+
+            &.hide-menu {
+                display: none;
+            }
+
+            .close-menu,
+            #close {
+                position: absolute;
+                margin: 0;
+                right: 0;
+                top: 0;
+                cursor: pointer;
+            }
+
+            .close-menu {
+                padding: 20px;
+                padding-right: 30px;
+            }
+
+            #close-div:hover {
+                .close-menu:hover,
+                #close:hover {
+                    color:#00ffc2;
+                }
+            }
+
+            #close {
+                color:#fff;
+                letter-spacing: 2px;
+                font-weight: 400;
+                font-size: 10px;
+                position: absolute;
+                padding-right: 22px;
+                margin-top: 60px;
+            }
+        }
+
+        .hamburger-mobile {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
         }
     }
 }

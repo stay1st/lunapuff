@@ -2,6 +2,11 @@ import './index.scss'
 import { useState, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
+import { MapContainer } from 'react-leaflet/MapContainer'
+import { TileLayer } from 'react-leaflet/TileLayer'
+import { useMap } from 'react-leaflet/hooks'
+import { Marker } from 'react-leaflet'
+import { Popup } from 'react-leaflet'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -15,7 +20,6 @@ const Contact = () => {
 
   const send = (e) => {
     e.preventDefault()
-
     emailjs
       .sendForm(
         'service_jv18o57',
@@ -79,6 +83,32 @@ const Contact = () => {
             </ul>
           </form>
         </div>
+      </div>
+      <div className="info-map">
+        Joshua Crawford,
+        <br />
+        U.S.,
+        <br />
+        Pittsburgh PA,
+        <br />
+      </div>
+      <div className="map-wrap" id="map">
+        <MapContainer
+          center={[40.4406, -79.9959]}
+          zoom={12}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[40.4406, -79.9959]}>
+            <Popup>
+              My location. 
+              <br />
+            </Popup>
+          </Marker>
+        </MapContainer>
       </div>
     </div>
   )

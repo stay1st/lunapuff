@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react'
 import './index.scss'
 import LogoS from '../../assets/images/logo-j.svg'
 import LogoSubtitle from '../../assets/images/joshua-logo.svg'
@@ -7,11 +8,9 @@ import {
   faCodeBranch,
   faCodeMerge,
   faCodePullRequest,
-  faEnvelope,
-  faHome,
-  faHomeAlt,
-  faMicrochip,
-  faUser,
+  faCodeCompare,
+  faHamburger,
+  faCodeFork,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
@@ -22,6 +21,8 @@ import {
 import { useMemo } from 'react'
 
 const Sidebar = () => {
+  const [navMobileMenu, setNavMobileMenu] = useState(false)
+
   return useMemo(() => {
     return (
       <div className="nav-bar">
@@ -31,7 +32,7 @@ const Sidebar = () => {
             <img className="sub-logo" src={LogoSubtitle} alt="joshua" />
           </div>
         </Link>
-        <nav>
+        <nav className={!navMobileMenu ? 'hide-menu' : 'show-menu'}>
           <NavLink exact="true" activeclassname="active" to="/">
             <FontAwesomeIcon icon={faCodeMerge} color="#a3a3a6" />
           </NavLink>
@@ -51,6 +52,25 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon icon={faCodePullRequest} color="#a3a3a6" />
           </NavLink>
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="portfolio-link"
+            to="/portfolio"
+          >
+            <FontAwesomeIcon icon={faCodeCompare} color="#a3a3a6" />
+          </NavLink>
+          <div id="close-div">
+            <FontAwesomeIcon
+              onClick={() => setNavMobileMenu(false)}
+              icon={faCodeFork}
+              color="#fff"
+              size="3x"
+              className="close-menu"
+              id={navMobileMenu}
+            />
+            <div id="close" onClick={() => setNavMobileMenu((false))}>CLOSE</div>
+          </div>
         </nav>
         <ul>
           <li>
@@ -81,6 +101,14 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
+        <FontAwesomeIcon
+          onClick={() => setNavMobileMenu(true)}
+          icon={faHamburger}
+          color="#00ffc2"
+          size="3x"
+          className="hamburger-mobile-fa"
+          id={navMobileMenu}
+        />
       </div>
     )
   })

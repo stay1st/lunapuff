@@ -1,6 +1,5 @@
 import './index.css';
 import WindowSize from './windowSize';
-import { useEffect } from 'react';
 
 const AnimatedBg = () => {
 
@@ -18,16 +17,22 @@ const AnimatedBg = () => {
     radius: (canvas.height/80) * (canvas.width/80)
   }
 
-  useEffect(() => {
+    // || When mouse is in window area.
+
     function handleMouseMove(e) {
       mouse.x = e.x;
       mouse.y = e.y;
     }
     window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.addEventListener('mousemove', handleMouseMove);
-    }
-  })
+
+
+    // When mouse is out of Window area
+  function handleMouseOut(){
+    mouse.x = undefined;
+    mouse.y = undefined;
+    return true
+  }
+  window.addEventListener('mouseout', handleMouseOut);
     // || class to create particle objects
   class Particle {
     constructor(x, y, directionX, directionY, size, color) {
@@ -47,7 +52,8 @@ const AnimatedBg = () => {
   }
 
   getRandomNum() {
-    return Math.random() * (7 - 0) + 0;
+    const random = Math.random() * (7 - 0) + 0;
+    return random;
   }
   // || For particle position = mouse position
   update() {
@@ -65,21 +71,22 @@ const AnimatedBg = () => {
     if (distance < mouse.radius + this.size) {
       if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
         this.x += 10;
-      }
+      } 
       if (mouse.x > this.x && this.x > this.size * 10) {
         this.x -= 10
-      }
+      } 
       if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
         this.y += 10;
-      }
+      } 
       if (mouse.y > this.y && this.y < this.size * 10) {
         this.y -= 10;
       }
     }
+    
     // || particle movement & drawing
     this.x += this.directionX;
     this.y += this.directionY;
-    this.draw(this.getRandomNum());
+    this.draw(this.getRandomNum.random)
   }
 }
 
@@ -87,7 +94,7 @@ const AnimatedBg = () => {
 // || create particle array
 function init() {
   particlesArray = [];
-  let numberOfParticles = (canvas.width) / 90;
+  let numberOfParticles = (canvas.height * canvas.width) / 9000;
   for (let i = 0; i < numberOfParticles; i++) {
     let size = (Math.random() * 5) + 1;
     let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
@@ -99,26 +106,19 @@ function init() {
   }
 }
 
-// || animation for loop
-function animate() {
-  requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, innerWidth, innerHeight);
-  particlesArray.map(val => val.update());
-  connect()
-}
-
 // || Distance between particles
 function connect() {
   let opacityValue = 1;
   for (let a = 0; a < particlesArray.length; a++) {
     for (let b = a; b < particlesArray.length; b++) {
-      let distance = (( particlesArray[a].x - particlesArray[b].x) 
+      let distance = 
+      (( particlesArray[a].x - particlesArray[b].x) 
       * (particlesArray[a].x - particlesArray[b].x))
       + ((particlesArray[a].y - particlesArray[b].y) 
-      * (particlesArray[a].y) - particlesArray[b].y);
-      if (distance < (canvas.height * canvas.width/9000) * (canvas.width * canvas.height/900)) {
+      * (particlesArray[a].y - particlesArray[b].y));
+      if (distance < (canvas.height * canvas.width/8000) * (canvas.width * canvas.height/8000)) {
         opacityValue = 1 - (distance / 50000)
-        ctx.strokeStyle='rgba(0, 144, 212,' + opacityValue + ")";
+        ctx.strokeStyle='rgb(0, 144, 212)';
         ctx.lineWidth = .5;
         ctx.beginPath();
         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -128,13 +128,17 @@ function connect() {
     }
   }
 }
-// || When mouse is out of window area.
-function handleMouseOut(){
-    mouse.x = undefined;
-    mouse.y = undefined;
-  }
 
-  window.addEventListener('mouseout', handleMouseOut);
+// || animation for loop
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].update()
+  }
+  connect()
+}
+
 
 init();
 animate();

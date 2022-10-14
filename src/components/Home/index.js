@@ -9,42 +9,30 @@ import PlayButton from './PlayButton'
 const AnimatedBg = React.lazy(() => import('../AnimatedBg'))
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate');
   const [portId, setPortId] = useState('')
   const [toggle, setToggle] = useState(null)
+  const welcomeArray = ['h', 'e', 'l', 'l', 'l', 'o',',']
   const nameArray = ['o', 's', 'h', 'u', 'a', ',']
   const jobArray = [
-    'a',
-    ' ',
-    'S',
-    'o',
-    'f',
-    't',
-    'w',
-    'a',
-    'r',
-    'e',
-    ' ',
-    'D',
-    'e',
-    'v',
-    'e',
     'l',
-    'o',
-    'p',
     'e',
+    't',
+    "'",
+    's',
+    ' ',
+    's',
+    'h',
+    'a',
     'r',
-    '.',
+    'e',
+    '!',
+    ' ',
+    '🌎',
     '\n',
   ]
 
-  const description = `<\/\> 🌕 Front-End Developer 🌖 <\/\> 🌗 JavaScript Coder 🌘 <\/\> 🌑 Aspiring Engineer 🌒 <\/\>`
-
-  useEffect(() => {
-    setTimeout(() => {
-      return setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
+  const description = `<\/\> 🌕 Front-End Developer 🌖 <\/\> 🌗 JavaScript Coder 🌘 <\/\> 🌑 Father & Friend 🌒 <\/\>`
 
   const playIntro = useCallback((audio) => {
     let luna1 = document.getElementById(audio)
@@ -61,25 +49,20 @@ const Home = () => {
     }
   }, [])
 
-  const handlePortId = () => {
-    setTimeout(() => {
-      return setPortId('port-id')
-    }, 9000)
-    clearTimeout()
-  }
-
   useEffect(() => {
     setTimeout(() => {
       playIntro('luna-intro')
     }, 2000)
-
     setTimeout(() => {
+      return setLetterClass('text-animate-hover')
+    }, 4000)
+    setTimeout(() => {
+      setPortId('port-id')
       playIntro('luna-next-step')
     }, 10000)
     return () => {
       playIntro.currentTime = 0
-      clearTimeout(playIntro)
-      return handlePortId()
+      return clearTimeout()
     }
   }, [playIntro])
 
@@ -93,11 +76,17 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
+          <AnimatedLetters
+              letterClass={letterClass}
+              strArray={welcomeArray}
+              idx={14}
+            />
             <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={['i', "t", "'", 's']}
+              idx={14}
+            />
             <img className="bounce" src={LogoTitle} alt="developer" />
             <AnimatedLetters
               letterClass={letterClass}
