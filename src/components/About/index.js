@@ -23,7 +23,6 @@ const About = () => {
   }, [])
 
   return (
-    <>
       <div className="container about-page">
         <div className="text-zone">
           <h1>
@@ -78,8 +77,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
-    </>
   )
 }
 
