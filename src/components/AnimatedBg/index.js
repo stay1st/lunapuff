@@ -94,7 +94,7 @@ const AnimatedBg = () => {
 // || create particle array
 function init() {
   particlesArray = [];
-  let numberOfParticles = (canvas.height * canvas.width) / 9000;
+  let numberOfParticles = (canvas.height * canvas.width) / 11000;
   for (let i = 0; i < numberOfParticles; i++) {
     let size = (Math.random() * 5) + 1;
     let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
@@ -116,8 +116,19 @@ function connect() {
       * (particlesArray[a].x - particlesArray[b].x))
       + ((particlesArray[a].y - particlesArray[b].y) 
       * (particlesArray[a].y - particlesArray[b].y));
+      if ((canvas.width >= 1200 && canvas.height >= 1080) && distance) {
+        if (distance < (canvas.height/2 * canvas.height/8000) * (canvas.width/2 * canvas.width/8000)){
+        opacityValue = 1 - (distance / .5)
+        ctx.strokeStyle='rgb(0, 144, 212)';
+        ctx.lineWidth = .5;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+        ctx.stroke();
+        }
+      } else {
       if (distance < (canvas.height * canvas.width/8000) * (canvas.width * canvas.height/8000)) {
-        opacityValue = 1 - (distance / 50000)
+        opacityValue = 1 - (distance / .5)
         ctx.strokeStyle='rgb(0, 144, 212)';
         ctx.lineWidth = .5;
         ctx.beginPath();
@@ -125,6 +136,7 @@ function connect() {
         ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
         ctx.stroke();
       }
+    }
     }
   }
 }
