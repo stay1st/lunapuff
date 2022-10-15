@@ -18,33 +18,46 @@ const PlayButton = (props) => {
           console.log(err)
         })
     }
-    return 'play-new'
+    return setButtonId('done-play');
   }
 
   const handlePlay = () => {
-    getLuna('luna-intro')
+    getLuna('luna-intro');
+     props.toggle = false;
     setTimeout(() => {
+      'luna-intro'.currentTime = 0;
       setButtonId('pulse-play')
-      return getLuna('luna-next-step')
-    }, 9000)
-    return () => {
-      clearTimeout(getLuna)
-    }
+      getLuna('luna-next-step')
+    }, 10000).then(() => {
+      return clearTimeout()
+    })
   }
 
   if (props.toggle === false) {
     return (
-      <div className="btn play-btn" id={buttonId} onClick={handlePlay}>
+      <div 
+        id={buttonId} 
+        onClick={handlePlay} 
+        style={{
+          animation: 'easeInOut 1.3s 2s linear',
+        }}
+        >
         <FontAwesomeIcon
+          className='play-btn'
           icon={faPlayCircle}
           style={{
             height: '30px',
-            marginRight: '12px',
-            width: '170px',
-            marginTop: '9px',
+            width: '50px',
+            animation: 'fadeIn 1.6s 2.3s infinite',
           }}
+          color="#00ffc2"
         />
-        Play
+        <div id='play-text' style={{
+          color: '#00ffc2',
+          fontSize: '18px',
+          fontWeight: '400',
+          animation: 'pulse 1.6s linear infinite',
+        }}>Play</div>
       </div>
     )
   }

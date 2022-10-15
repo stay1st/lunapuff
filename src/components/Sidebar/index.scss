@@ -162,6 +162,7 @@
         background: none;
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
+        box-shadow: none;
         width: auto;
         height: auto;
         min-height: auto;
@@ -182,6 +183,7 @@
             align-items: center;
             z-index: 2;
             margin: 0;
+            padding: 0;
             background: rgba(81, 9, 109, 0.628);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(10px);
@@ -248,11 +250,26 @@
             }
         }
 
-        .hamburger-mobile {
-            display: block;
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .hamburger-mobile-fa {
+            margin: 0;
+            padding-right: 12px;
+            align-items: center;
+            cursor: pointer;
+        }
+        #hamburger-container {
+            width: 100vw;
+        }
+        .fa-home {
+            padding-top: 90px;
+        }
+        .about-link {
+            transform: translateX(2px);
+        }
+        .contact-link {
+            transform: translateX(4px);
+        }
+        .portfolio-link {
+            transform: translateX(8px);
         }
     }
 }

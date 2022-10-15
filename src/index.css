@@ -2,6 +2,8 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  width: auto;
+  height: auto;
 }
 
 body {
@@ -11,22 +13,18 @@ body {
   background: #151616;
   overflow: hidden;
   display: block;
+  width: auto;
+  height: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dashboard {
+/* .dashboard {
   margin-top: 200px;
   margin-left: 200px;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-@media screen and (max-width: 1200px) {
-  body {
-    overflow: visible;
-  }
 }

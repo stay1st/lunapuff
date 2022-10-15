@@ -93,12 +93,14 @@
         letter-spacing: 2px;
         font-family: 'Helvetica Neue';
         animation: fadeIn 1s 1.8s backwards;
+        width: auto;
     }
 
     .btn-container {
         align-items: center;
         width: inherit;
         height: auto;
+        max-height: 120px;
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -151,6 +153,11 @@
         }
     }
 
+    #done-play {
+        display: none;
+    }
+
+
     .btn:hover {
         color: #0090d4;
         text-decoration: none;
@@ -159,24 +166,8 @@
             stroke-width: 5;
             stroke-dasharray: 15, 310;
             stroke-dashoffset: 48;
-            transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+            transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
         }
-    }
-
-    .play-btn {
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        position: inherit;
-        margin-right: 50%;
-        margin-bottom: 50%;
-        margin-top: 50%;
-        animation: pulse 2s infinite;
-    }
-
-    #pulse-play {
-        animation: fadeOut 1s 1s forwards;
     }
 
     #port-id {
@@ -192,6 +183,7 @@
             stroke: ease-in-out 1s 1s backwards;
             height: 45px;
         }
+
         70% {
             background: rgba(81, 9, 109, 0.101);
             font-size: 22px;
@@ -200,10 +192,66 @@
             background-repeat: repeat;
             box-shadow: 2px 2px 10px 5px #06d4cd75;
         }
+
         100% {
             stroke: ease-in-out 1s 1s forwards;
             height: 45px;
 
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .home-page h1::before,
+    .home-page h1::after {
+        display: none;
+    }
+
+    .home-page {
+        align-items: center;
+        margin-top: 90px;
+
+        .text-zone {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            left: 0;
+
+        }
+
+        .btn-container {
+
+            .play-btn {
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                padding: auto;
+                animation: pulse 2s infinite;
+                width: 100%;
+
+                path {
+                    margin: auto !important;
+                }
+
+                svg {
+                    width: auto;
+                    margin: auto;
+                    padding: 0;
+                }
+            }
+        
+            #pulse-play {
+                animation: fadeOut 1s 1s forwards;
+            }
+
+        }
+        #close-div,
+        .close {
+            margin: auto;
+            padding: auto;
         }
     }
 }

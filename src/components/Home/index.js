@@ -8,7 +8,7 @@ import lunaNextStep from '../../assets/audio/luna-intro-to-click.mp3'
 import PlayButton from './PlayButton'
 const AnimatedBg = React.lazy(() => import('../AnimatedBg'))
 
-const Home = () => {
+const Home = (props) => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const [portId, setPortId] = useState('')
   const [toggle, setToggle] = useState(null)
@@ -32,7 +32,7 @@ const Home = () => {
     '\n',
   ]
 
-  const description = `<\/\> 🌕 Front-End Developer 🌖 <\/\> 🌗 JavaScript Coder 🌘 <\/\> 🌑 Father & Friend 🌒 <\/\>`
+  const description = `</> 🌕 Front-End Developer 🌖 </> 🌗 JavaScript Coder 🌘 </>🌑 Father & Friend 🌒 </>`
 
   const playIntro = useCallback((audio) => {
     let luna1 = document.getElementById(audio)

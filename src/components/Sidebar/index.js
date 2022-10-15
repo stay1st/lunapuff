@@ -33,7 +33,12 @@ const Sidebar = () => {
           </div>
         </Link>
         <nav className={!navMobileMenu ? 'hide-menu' : 'show-menu'}>
-          <NavLink exact="true" activeclassname="active" to="/">
+          <NavLink 
+            exact="true" 
+            className='fa-home'
+            activeclassname="active" 
+            to="/"
+          >
             <FontAwesomeIcon icon={faCodeMerge} color="#a3a3a6" />
           </NavLink>
           <NavLink
@@ -53,9 +58,9 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodePullRequest} color="#a3a3a6" />
           </NavLink>
           <NavLink
-            exact="true"
-            activeclassname="active"
-            className="portfolio-link"
+            exact="true" 
+            activeclassname="active" 
+            className="portfolio-link" 
             to="/portfolio"
           >
             <FontAwesomeIcon icon={faCodeCompare} color="#a3a3a6" />
@@ -67,9 +72,11 @@ const Sidebar = () => {
               color="#fff"
               size="3x"
               className="close-menu"
-              id={navMobileMenu}
+              id={navMobileMenu.toString()}
             />
-            <div id="close" onClick={() => setNavMobileMenu((false))}>CLOSE</div>
+            <div id="close" onClick={() => setNavMobileMenu(false)}>
+              CLOSE
+            </div>
           </div>
         </nav>
         <ul>
@@ -101,14 +108,18 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
-        <FontAwesomeIcon
-          onClick={() => setNavMobileMenu(true)}
-          icon={faHamburger}
-          color="#00ffc2"
-          size="3x"
-          className="hamburger-mobile-fa"
-          id={navMobileMenu}
-        />
+        <div id='hamburger-container'>
+          <FontAwesomeIcon
+            onClick={() => setNavMobileMenu(true)}
+            icon={faHamburger}
+            color="#00ffc2"
+            size="3x"
+            className="hamburger-mobile-fa"
+            style={{
+              float: 'right',
+            }}
+          />
+        </div>
       </div>
     )
   })
