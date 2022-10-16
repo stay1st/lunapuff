@@ -229,24 +229,20 @@
                 right: 0;
                 margin: auto;
                 padding: auto;
+                margin-top: 8px;
                 animation: pulse 2s infinite;
                 width: 100%;
-
-                path {
-                    margin: auto !important;
-                }
-
-                svg {
-                    width: auto;
-                    margin: auto;
-                    padding: 0;
+                &:hover {
+                    color: #0090d4;
                 }
             }
         
             #pulse-play {
                 animation: fadeOut 1s 1s forwards;
+                &:hover {
+                    color: #0090d4;
+                }
             }
-
         }
         #close-div,
         .close {

@@ -106,3 +106,27 @@
     opacity: 0;
     animation: backInRight 1s 1.2s forwards;
 }
+
+@media screen and (max-width: 1200px) {
+
+    .contact-page {
+        height: 100%;
+    }
+    .map-wrap {
+        float: none;
+        width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+
+    .info-map {
+        position: relative;
+        display: flex;
+        top: 0;
+        right: 0;
+        margin-left: 10px;
+        float: none;
+        margin-bottom: 50px;
+        padding: auto;
+    }
+}

@@ -48,6 +48,7 @@ const PlayButton = (props) => {
           style={{
             height: '30px',
             width: '50px',
+            cursor: 'pointer',
             animation: 'fadeIn 1.6s 2.3s infinite',
           }}
           color="#00ffc2"
@@ -56,6 +57,7 @@ const PlayButton = (props) => {
           color: '#00ffc2',
           fontSize: '18px',
           fontWeight: '400',
+          cursor: 'pointer',
           animation: 'pulse 1.6s linear infinite',
         }}>Play</div>
       </div>

@@ -34,6 +34,7 @@ const Sidebar = () => {
         </Link>
         <nav className={!navMobileMenu ? 'hide-menu' : 'show-menu'}>
           <NavLink 
+            onClick={() => setNavMobileMenu(false)}
             exact="true" 
             className='fa-home'
             activeclassname="active" 
@@ -42,6 +43,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodeMerge} color="#a3a3a6" />
           </NavLink>
           <NavLink
+            onClick={() => setNavMobileMenu(false)}
             exact="true"
             activeclassname="active"
             className="about-link"
@@ -50,6 +52,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodeBranch} color="#a3a3a6" />
           </NavLink>
           <NavLink
+            onClick={() => setNavMobileMenu(false)}
             exact="true"
             activeclassname="active"
             className="contact-link"
@@ -58,6 +61,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodePullRequest} color="#a3a3a6" />
           </NavLink>
           <NavLink
+            onClick={() => setNavMobileMenu(false)}
             exact="true" 
             activeclassname="active" 
             className="portfolio-link" 
