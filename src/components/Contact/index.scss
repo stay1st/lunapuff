@@ -1,5 +1,5 @@
 .contact-form {
-    width: 50%;
+    padding-right: 20px;
 
     ul {
         padding: 0;
@@ -75,9 +75,12 @@
 }
 
 .info-map {
+    position: absolute;
     background-color: #000;
     top: 10%;
-    right: 15%;
+    right: 25%;
+    left: 70%;
+    margin: auto;
     z-index: 2;
     width: 267px;
     padding: 20px;
@@ -120,7 +123,7 @@
     }
 
     .info-map {
-        position: relative;
+        position: inherit;
         display: flex;
         top: 0;
         right: 0;

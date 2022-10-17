@@ -56,48 +56,37 @@
 .about-page,
 .contact-page,
 .portfolio-page {
+    h1 {
+        font-size: 53px;
+        font-family: 'Coolvetica', sans-serif;
+        color: #00ffc2;
+        font-weight: 400;
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 40px;
+        left: 10px;
 
-        h1 {
-            font-size: 53px;
-            font-family: 'Coolvetica', sans-serif;
-            color: #00ffc2;
-            font-weight: 400;
-            margin-top: 0;
-            position: relative;
-            margin-bottom: 40px;
-            left: 10px;
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
 
-            &::before {
-                content: '<h1>';
-                font-family: 'La Belle Aurore';
-                font-size: 18px;
-                position: absolute;
-                margin-top: -10px;
-                opacity: 0.6;
-                line-height: 18px;
-            }
+        &::after {
+            content: '</h1>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: -30px;
+            bottom: -20px;
+            margin-left: 20px;
+            opacity: 0.6;
 
-            &::after {
-                content: '</h1>';
-                font-family: 'La Belle Aurore';
-                font-size: 18px;
-                line-height: 18px;
-                position: absolute;
-                left: -30px;
-                bottom: -20px;
-                margin-left: 20px;
-                opacity: 0.6;
-
-            }
-            .text-zone {
-                position: absolute;
-                left: 10%;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 35%;
-                vertical-align: middle;
-                display: table-cell;
-                max-height: 90%;
         }
 
         h2 {
@@ -106,7 +95,6 @@
             color: #0090d4;
             font-family: sans-serif;
             font-weight: 500;
-            min-width: fit-content;
             animation: pulse 1s;
 
             &:nth-of-type(1) {
@@ -144,6 +132,16 @@
         }
     }
 }
+.text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+}
 
 @media screen and (max-width: 1200px) {
     .page {
@@ -159,18 +157,18 @@
             position: initial;
             height: auto;
             min-height: auto;
-    
+
             &.about-page,
             &.contact-page,
             &.portfolio-page {
-    
-                .text-zone{
-                position: initial;
-                transform: none;
-                width: 100%;
-                display: block;
-                padding: 20px;
-                box-sizing: border-box;
+
+                .text-zone {
+                    position: initial;
+                    transform: none;
+                    width: 100%;
+                    display: block;
+                    padding: 20px;
+                    box-sizing: border-box;
                 }
             }
         }

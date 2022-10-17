@@ -8,6 +8,7 @@ import {
   faGitAlt,
   faHtml5,
   faJsSquare,
+  faNode,
   faReact,
   faSquareGithub,
 } from '@fortawesome/free-brands-svg-icons'
@@ -58,10 +59,10 @@ const About = () => {
                 <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
               </Link>
             </div>
-            <div className="github">
-              <a href="https://www.github.com/stay1st/" alt="github@stay1st">
-                <FontAwesomeIcon icon={faSquareGithub} color="#FFF" />
-              </a>
+            <div className="nodejs">
+              <Link to="/portfolio" alt="nodejs">
+                <FontAwesomeIcon icon={faNode} color="#FFF" />
+              </Link>
             </div>
             <div className="javaScript" alt="portfolio">
               <Link to="/portfolio">

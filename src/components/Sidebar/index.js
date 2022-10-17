@@ -15,13 +15,16 @@ import {
 import {
   faFacebook,
   faGithub,
-  faHackerNews,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import { useMemo } from 'react'
 
 const Sidebar = () => {
   const [navMobileMenu, setNavMobileMenu] = useState(false)
+
+  if (navMobileMenu === true) {
+    
+  }
 
   return useMemo(() => {
     return (
