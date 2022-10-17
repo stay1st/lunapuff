@@ -1,0 +1,10 @@
+{
+    "portfolio": [
+        {
+            "cover": "../assets/images/quote-generator.png",
+            "title": "Quote Generator", 
+            "description": "React, JSX, Javascript, NodeJS",
+            "url": "https://stay1st.github.io/Quote-Generator"
+        }
+    ]
+}

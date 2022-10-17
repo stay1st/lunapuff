@@ -42,7 +42,7 @@
         }
 
         img {
-            width: 28px;
+            width: 23px;
             margin-left: 20px;
             margin-right: 2px;
             opacity: 100;
@@ -85,15 +85,26 @@
 
     h2 {
         color: #0090d4;
-        margin-top: 20px;
-        margin-bottom: 25px;
         font-weight: 100;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 400;
         letter-spacing: 2px;
         font-family: 'Helvetica Neue';
         animation: fadeIn 1s 1.8s backwards;
         width: auto;
+    }
+
+    #description {
+        justify-content: center;
+        align-content: center;
+        margin-right: 12px;
+        width: 80%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #00ffc2;
+        max-width: 450px;
+        background:rgba(96, 10, 130, 0.184);
+        animation: fadeIn 1s 1.8s backwards;
     }
 
     .btn-container {
@@ -127,7 +138,7 @@
         line-height: 15px;
         text-decoration: none;
         padding: 1em;
-        margin-top: 5px;
+        margin-top: 8px;
         margin-right: 18px;
         justify-content: left;
         float: left;

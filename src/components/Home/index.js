@@ -12,8 +12,8 @@ const Home = (props) => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const [portId, setPortId] = useState('')
   const [toggle, setToggle] = useState(null)
-  const welcomeArray = ['h', 'e', 'l', 'l', 'l', 'o',',']
-  const nameArray = ['o', 's', 'h', 'u', 'a', ',']
+  const welcomeArray = ['h', 'e', 'l', 'l', 'o',',']
+  const nameArray = ['o', 's', 'h', ',']
   const jobArray = [
     'l',
     'e',
@@ -27,12 +27,10 @@ const Home = (props) => {
     'r',
     'e',
     '!',
-    ' ',
-    '🌎',
     '\n',
   ]
 
-  const description = `</> 🌕 Front-End Developer 🌖 </> 🌗 JavaScript Coder 🌘 </>🌑 Father & Friend 🌒 </>`
+  const description = `Front-End Developer, JavaScript Coder, Life-long Learner 🌕🌗🌘🌑`
 
   const playIntro = useCallback((audio) => {
     let luna1 = document.getElementById(audio)
@@ -100,7 +98,9 @@ const Home = (props) => {
               idx={16}
             />
           </h1>
-          <h2>{description}</h2>
+          <div>
+          <h2 id='description'>{description}</h2>
+          </div>
           <div className="btn-container">
             <Link to="/portfolio" className="btn" id={portId}>
               <svg id={portId}>
