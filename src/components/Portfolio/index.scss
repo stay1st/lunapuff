@@ -1,6 +1,6 @@
 .portfolio-page {
     padding: 100px;
-    width: calc(100% - 150px);
+    width: 100%;
     position: initial;
     height: 100%;
     overflow-y: scroll;
@@ -8,5 +8,17 @@
     .projects-img {
         width: 40%;
         Height: auto;
+    }
+    canvas {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .portfolio-page {
+        width: calc(100% - 150px);
     }
 }
