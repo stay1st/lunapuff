@@ -47,7 +47,7 @@ const AnimatedBg = () => {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    ctx.fillStyle = '#00ffc2';
+    ctx.fillStyle = 'rgb(138, 16, 186)';
     ctx.fill();
   }
 
@@ -158,7 +158,6 @@ animate();
   return (
     <div className='canvas-container'>
     <script></script>
-      {/* <canvas id="canvas-main"></canvas> */}
     </div>
   )
 }

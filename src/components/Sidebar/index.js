@@ -21,9 +21,15 @@ import { useMemo } from 'react'
 
 const Sidebar = () => {
   const [navMobileMenu, setNavMobileMenu] = useState(false)
+  const [hamburgerAnimate, setHamburgerAnimate] = useState('hamburger-close')
 
-  if (navMobileMenu === true) {
-    
+  const handleMenuCloseHide = () => {
+    if (navMobileMenu === true) {
+      setHamburgerAnimate('hamburger-close')
+    return setNavMobileMenu(false)
+    }
+    setHamburgerAnimate('hamburger')
+    return setNavMobileMenu(true)
   }
 
   return useMemo(() => {
@@ -37,7 +43,7 @@ const Sidebar = () => {
         </Link>
         <nav className={!navMobileMenu ? 'hide-menu' : 'show-menu'}>
           <NavLink 
-            onClick={() => setNavMobileMenu(false)}
+            onClick={handleMenuCloseHide}
             exact="true" 
             className='fa-home'
             activeclassname="active" 
@@ -46,7 +52,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodeMerge} color="#a3a3a6" />
           </NavLink>
           <NavLink
-            onClick={() => setNavMobileMenu(false)}
+            onClick={handleMenuCloseHide}
             exact="true"
             activeclassname="active"
             className="about-link"
@@ -55,7 +61,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodeBranch} color="#a3a3a6" />
           </NavLink>
           <NavLink
-            onClick={() => setNavMobileMenu(false)}
+            onClick={handleMenuCloseHide}
             exact="true"
             activeclassname="active"
             className="contact-link"
@@ -64,7 +70,7 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faCodePullRequest} color="#a3a3a6" />
           </NavLink>
           <NavLink
-            onClick={() => setNavMobileMenu(false)}
+            onClick={handleMenuCloseHide}
             exact="true" 
             activeclassname="active" 
             className="portfolio-link" 
@@ -72,19 +78,19 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon icon={faCodeCompare} color="#a3a3a6" />
           </NavLink>
-          <div id="close-div">
+          {/* <div id="close-div">
             <FontAwesomeIcon
-              onClick={() => setNavMobileMenu(false)}
+              onClick={handleMenuCloseHide}
               icon={faCodeFork}
               color="#fff"
               size="3x"
               className="close-menu"
               id={navMobileMenu.toString()}
             />
-            <div id="close" onClick={() => setNavMobileMenu(false)}>
+            <div id="close" onClick={handleMenuCloseHide}>
               CLOSE
             </div>
-          </div>
+          </div> */}
         </nav>
         <ul>
           <li>
@@ -115,18 +121,18 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
-        <div id='hamburger-container'>
-          <FontAwesomeIcon
-            onClick={() => setNavMobileMenu(true)}
-            icon={faHamburger}
-            color="#00ffc2"
-            size="3x"
-            className="hamburger-mobile-fa"
+        <span id='hamburger-container'>
+          <div
+            onClick={handleMenuCloseHide}
+            id={hamburgerAnimate}
             style={{
+              margin: '25px',
               float: 'right',
             }}
-          />
-        </div>
+          >
+            <div></div>
+          </div>
+        </span>
       </div>
     )
   })

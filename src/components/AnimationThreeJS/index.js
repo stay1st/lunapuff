@@ -8,7 +8,7 @@ import {
 } from '@react-three/drei'
 import { useSpring, a } from '@react-spring/three'
 
-softShadows()
+// softShadows()
 
 const SpinningMesh = ({ position, args, color, speed }) => {
   const meshBox = useRef(null)
@@ -25,7 +25,6 @@ const SpinningMesh = ({ position, args, color, speed }) => {
     <a.mesh
       onClick={() => setExpand(!expand)}
       scale={props.scale}
-      castShadow
       position={position}
       ref={meshBox}
     >
@@ -43,14 +42,11 @@ const SpinningMesh = ({ position, args, color, speed }) => {
 function AnimationThreeJS() {
   return (
     <Canvas
-      shadowMap
-      colorManagement
       id="canvas-threejs"
-      camera={{ position: [-5, 2, 10], fov: 30 }}
+      camera={{ fov: 60 }} //removed position: {[-5, -10, 0]}
     >
       <ambientLight intensity={0.2} />
       <directionalLight
-        castShadow
         position={[0, 10, 0]}
         intensity={1.5}
         shadow-mapSize-width={1024}
@@ -65,7 +61,6 @@ function AnimationThreeJS() {
 
       <group>
         <mesh
-          receiveShadow
           rotation={[-Math.PI / 2, 0, 0]}
           position={[0, -3, 0]}
         >
@@ -76,13 +71,21 @@ function AnimationThreeJS() {
       </group>
 
       <SpinningMesh
-        position={[0, 1, 0]}
-        args={[3, 2, 1]}
+        position={[0, 0, 0]}
+        args={[2, 4, .5]}
         color="aqua"
         speed={2}
       />
-      <SpinningMesh position={[-2, 1, -5]} color="blue" speed={6} />
-      <SpinningMesh position={[5, 1, -2]} color="purple" speed={6} />
+      <SpinningMesh 
+        position={[0, -4, -3]} 
+        args={[2, 4, .5]}
+        color="blue" speed={6} />
+      <SpinningMesh 
+        position={[0, -7, 0]} 
+        args={[2, 4, .5]}
+        color="purple" 
+        speed={6}
+        />
       <OrbitControls />
     </Canvas>
   )

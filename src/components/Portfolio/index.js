@@ -40,16 +40,15 @@ const Portfolio = () => {
 
   return (
     <div className="container portfolio-page">
-      <h1 className="page-title">
+      <h1 id="page-title">
         <AnimatedLetters
           letterClass={letterClass}
           strArray={['P', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o']}
-          idx={15}
+          idx={20}
         />
       </h1>
       <Suspense>
         <AnimationThreeJS 
-            portImages={renderPortfolio(projects.portfolio)}
             className='threejs-canvas' />
       </Suspense>
     </div>

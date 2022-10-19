@@ -12,9 +12,7 @@ const Layout = () => {
           <br />
           &lt;body&gt;
         </span>
-
         <Outlet />
-
         <span className="tags bottom-tags">
           &lt;/body&gt;
           <br />

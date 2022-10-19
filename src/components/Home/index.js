@@ -9,10 +9,10 @@ import PlayButton from './PlayButton'
 const AnimatedBg = React.lazy(() => import('../AnimatedBg'))
 
 const Home = (props) => {
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass, setLetterClass] = useState('text-animate')
   const [portId, setPortId] = useState('')
   const [toggle, setToggle] = useState(null)
-  const welcomeArray = ['h', 'e', 'l', 'l', 'o',',']
+  const welcomeArray = ['H', 'e', 'l', 'l', 'o', ',']
   const nameArray = ['o', 's', 'h', ',']
   const jobArray = [
     'l',
@@ -21,13 +21,13 @@ const Home = (props) => {
     "'",
     's',
     ' ',
-    's',
-    'h',
-    'a',
+    'c',
     'r',
     'e',
+    'a',
+    't',
+    'e',
     '!',
-    '\n',
   ]
 
   const description = `Front-End Developer, JavaScript Coder, Life-long Learner 🌕🌗🌘🌑`
@@ -74,7 +74,7 @@ const Home = (props) => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-          <AnimatedLetters
+            <AnimatedLetters
               letterClass={letterClass}
               strArray={welcomeArray}
               idx={14}
@@ -82,29 +82,36 @@ const Home = (props) => {
             <br />
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['i', "t", "'", 's']}
-              idx={14}
+              strArray={['i', 't', "'", 's']}
+              idx={15}
             />
             <img className="bounce" src={LogoTitle} alt="developer" />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
-              idx={15}
+              idx={16}
             />
             <br />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={16}
+              idx={17}
             />
           </h1>
-          <div>
-          <h2 id='description'>{description}</h2>
+          <div className='home-description-div'>
+            <h2 id="description">{description}</h2>
           </div>
           <div className="btn-container">
             <Link to="/portfolio" className="btn" id={portId}>
               <svg id={portId}>
-                <rect x="0" y="0" fill="none" width="100%" height="100%" id={portId}/>
+                <rect
+                  x="0"
+                  y="0"
+                  fill="none"
+                  width="100%"
+                  height="100%"
+                  id={portId}
+                />
               </svg>
               Portfolio
             </Link>

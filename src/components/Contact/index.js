@@ -45,7 +45,7 @@ const Contact = () => {
           <AnimatedLetters
             letterClass={letterClass}
             strArray={['C', 'o', 'n', 't', 'a', 'c', 't']}
-            idx={15}
+            idx={18}
           />
         </h1>
         <h3>Looking to create together? You can reach me here!</h3>
@@ -53,27 +53,43 @@ const Contact = () => {
           <form ref={formReferance} onSubmit={send}>
             <ul>
               <li className="half">
-                <input type="text" name="name" placeholder="Name" required />
+              <label for='name'></label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  placeholder="Name" 
+                  required  
+                />
               </li>
               <li className="half">
-                <input type="email" name="email" placeholder="Email" required />
-              </li>
-              <li>
-                <input
-                  placeholder="Subject"
-                  type="text"
-                  name="subject"
-                  requried
+              <label for='email'></label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder="Email" 
+                  required   
                 />
               </li>
               <li>
+              <label for='subject'></label>
+                <input
+                  placeholder="Subject"
+                  type="text"
+                  name="subject" 
+                  required
+                />
+              </li>
+              <li>
+              <label for='message'></label>
                 <textarea
                   placeholder="Message"
+                  type='message'
                   name="message"
                   required
                 ></textarea>
               </li>
               <li>
+              <label for='submit'></label>
                 <input
                   type="submit"
                   className="flat-button"
@@ -87,16 +103,19 @@ const Contact = () => {
       <div className="info-map">
         Joshua Crawford,
         <br />
-        U.S.,
+        US,
         <br />
         Pittsburgh PA,
         <br />
+        (727) 642-0606
       </div>
       <div className="map-wrap" id="map">
         <MapContainer
-          center={[40.4406, -79.9959]}
-          zoom={12}
-          scrollWheelZoom={false}
+          center={[40.4406, -79.9959]} 
+          zoom={12} 
+          scrollWheelZoom={false} 
+          width='100%' 
+          height='100%' 
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

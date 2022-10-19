@@ -4,6 +4,7 @@
 $primary-color: #00ffc2;
 $secondary-color: #0090d4;
 $accent-color: rgba(81, 9, 109, 0.101);
+$mobile-menu-color: rgba(81, 9, 109, 0.628);
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -23,4 +24,11 @@ $accent-color: rgba(81, 9, 109, 0.101);
 input,
 textarea {
   font-family: 'Helvetica Neue'
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    display: block;
+    align-items: center;
+  }
 }

@@ -10,7 +10,6 @@ import {
   faJsSquare,
   faNode,
   faReact,
-  faSquareGithub,
 } from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
@@ -29,7 +28,7 @@ const About = () => {
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['A', 'b', 'o', 'u', 't']}
-              idx={15}
+              idx={19}
             />
           </h1>
           <h2>What brought me into development?</h2>

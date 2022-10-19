@@ -1,10 +1,7 @@
 .home-page {
 
     .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
+        margin-top: 50px;
         width: 40%;
         max-height: 90%;
     }
@@ -22,8 +19,7 @@
             color: #00ffc2;
             font-size: 18px;
             position: absolute;
-            margin-top: -40px;
-            left: 15px;
+            margin-top: -20px;
             opacity: 0.6;
 
         }
@@ -32,7 +28,6 @@
             content: '\A </h1>';
             white-space: pre;
             font-family: 'La Belle Aurore';
-            left: 15px;
             position: relative;
             color: #00ffc2;
             font-size: 18px;
@@ -42,7 +37,7 @@
         }
 
         img {
-            width: 23px;
+            width: 22px;
             margin-left: 20px;
             margin-right: 2px;
             opacity: 100;
@@ -94,19 +89,6 @@
         width: auto;
     }
 
-    #description {
-        justify-content: center;
-        align-content: center;
-        margin-right: 12px;
-        width: 80%;
-        padding: 12px;
-        border-radius: 5px;
-        border: 1px solid #00ffc2;
-        max-width: 450px;
-        background:rgba(96, 10, 130, 0.184);
-        animation: fadeIn 1s 1.8s backwards;
-    }
-
     .btn-container {
         align-items: center;
         width: inherit;
@@ -114,7 +96,6 @@
         max-height: 120px;
         display: flex;
         flex-direction: column;
-        justify-content: left;
         text-align: center;
         //border-bottom: 1px solid #00ffc2;
 
@@ -182,46 +163,60 @@
     }
 
     #port-id {
-        animation-name: portfolio;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 6s;
-        animation-delay: .9s;
+        animation: wiggle 3s linear infinite;      
+        animation-delay: .9s
     }
 
-    @keyframes portfolio {
-        0% {
-            stroke: ease-in-out 1s 1s backwards;
-            height: 45px;
-        }
+/* Keyframes */
+@keyframes wiggle {
 
-        70% {
-            background: rgba(81, 9, 109, 0.101);
-            font-size: 22px;
-            height: 17px;
-            stroke: none;
-            background-repeat: repeat;
-            box-shadow: 2px 2px 10px 5px #06d4cd75;
-        }
-
-        100% {
-            stroke: ease-in-out 1s 1s forwards;
-            height: 45px;
-
-        }
+    0% {
+        transform: rotateZ(0);
     }
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-1deg);
+    }
+
+    20% {
+        transform: rotateZ(1deg) scale(.9)
+    }
+
+    25% {
+        transform: rotateZ(-1deg);
+    }
+
+    30% {
+        transform: rotateZ(2deg);
+        background: rgba(89, 88, 88, 0.45);
+    }
+
+    35% {
+        transform: rotateZ(-1deg);
+    }
+
+    40% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
 }
 
 @media screen and (max-width: 1200px) {
-    
-    .home-page h1::before,
-    .home-page h1::after {
-        display: none;
-    }
+
+    // .home-page h1::before,
+    // .home-page h1::after {
+    //     display: none;
+    // }
 
     .home-page {
+        justify-content: center;
         align-items: center;
-        margin-top: 90px;
 
         .text-zone {
             width: 100%;
@@ -229,6 +224,14 @@
             box-sizing: border-box;
             left: 0;
 
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+
+        img {
+            width: 20px;
         }
 
         .btn-container {
@@ -243,18 +246,21 @@
                 margin-top: 8px;
                 animation: pulse 2s infinite;
                 width: 100%;
+
                 &:hover {
                     color: #0090d4;
                 }
             }
-        
+
             #pulse-play {
                 animation: fadeOut 1s 1s forwards;
+
                 &:hover {
                     color: #0090d4;
                 }
             }
         }
+
         #close-div,
         .close {
             margin: auto;
