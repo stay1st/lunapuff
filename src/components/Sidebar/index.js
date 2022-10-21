@@ -9,8 +9,7 @@ import {
   faCodeMerge,
   faCodePullRequest,
   faCodeCompare,
-  faHamburger,
-  faCodeFork,
+  faTriangleCircleSquare,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
@@ -18,6 +17,8 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import { useMemo } from 'react'
+
+
 
 const Sidebar = () => {
   const [navMobileMenu, setNavMobileMenu] = useState(false)
@@ -78,21 +79,17 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon icon={faCodeCompare} color="#a3a3a6" />
           </NavLink>
-          {/* <div id="close-div">
-            <FontAwesomeIcon
-              onClick={handleMenuCloseHide}
-              icon={faCodeFork}
-              color="#fff"
-              size="3x"
-              className="close-menu"
-              id={navMobileMenu.toString()}
-            />
-            <div id="close" onClick={handleMenuCloseHide}>
-              CLOSE
-            </div>
-          </div> */}
         </nav>
         <ul>
+        <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://vercel.com/stay1st"
+            >
+              <FontAwesomeIcon icon={faTriangleCircleSquare} color="#a3a3a6" />
+            </a>
+          </li>
           <li>
             <a
               target="_blank"

@@ -1,8 +1,6 @@
 import './index.scss'
 import React, { useState, useEffect, Suspense } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import AnimationThreeJS from '../AnimationThreeJS'
-import projects from '../../portfolio/portfolio.json'
 import cover from '../../assets/images/quote-generator.png'
 
 const Portfolio = () => {
@@ -47,10 +45,6 @@ const Portfolio = () => {
           idx={20}
         />
       </h1>
-      <Suspense>
-        <AnimationThreeJS 
-            className='threejs-canvas' />
-      </Suspense>
     </div>
   )
 }

@@ -39,29 +39,24 @@ const About = () => {
           improve and collaborate with others! So, please don't hesitate to
           reach out.
         </p>
-        <p style={{ color: '#00ffc2' }}>For aspiring Mother or Father:</p>
+        <p style={{ color: '#00ffc2' }}>For the aspiring developer:</p>
         <p>
-          I know that it can be very difficult to learn all that is needed to
-          become a software developer when you are a parent. If this is you, I'm
-          rooting for you and am a huge fan of your's! Hang in there Mom or Dad!
-          I know it can get lonely in those late night sessions, but you can do
-          it!
+          I know that it can be very difficult to learn all that is needed on your journey. If this is you, I'm
+          rooting for you and I'm a huge fan of your's! Hang in there, you can do it!
         </p>
+        <p>I've compiled a list of helpful resources that helped me on this journey. My hopes is that
+        they will help you also! Happy Coding! 💻</p>
         <p>
           <ul>
             <li>
-              <strong>Highly reccommend:</strong> FreeCodeCamp.org, CSX Free Codesmith.io with CSBin, 
-              People also like theOdinProject.com, but personally I felt CodeAcademyGo & Codesmith was enough when paired with MDN and FCC.org mentioned above.
+              <strong>Highly reccommend:</strong> <a href='https://www.freecodecamp.org/'>FreeCodeCamp.org</a>, <a href='https://www.codesmith.io/'>CSX/Javascript-Workshops/Pair-Programming/Codesmith.io</a>, 
+              People also like <a href='https://www.theodinproject.com/theOdinProject.com'>The Odin Project</a>.
             </li>
             <li>
-              <strong>Highly recommend:</strong> Codesmith.io's Free Workshops &
-              Pair Programming Sessions.
+              <strong>Other Resources:</strong> MDN, W3 Schools, FontAwesome CDN, Github,
+              Git CLI, Daily.dev, ThreeJS.org, Codewars, Leetcode, ThreeJS-Journey, ReactThree-Fiber, NPM, 
             </li>
-            <li>
-              Sites and Documentation: MDN, W3 Schools, FontAwesome CDN, Github,
-              Git CLI, Daily.dev,
-            </li>
-            <li>All Phone Apps Used:</li>
+            <li>Helpful iPhone Applications:</li>
             <ul>
               <li>
                 Mimo, CodeAcademyGo, SoloLearn, RegEx Lab, Github,
