@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar'
+import Portfolio from '../Portfolio'
 import './index.scss'
 
 const Layout = () => {
@@ -13,6 +14,7 @@ const Layout = () => {
           &lt;body&gt;
         </span>
         <Outlet />
+        <Portfolio />
         <span className="tags bottom-tags">
           &lt;/body&gt;
           <br />

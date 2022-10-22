@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,20 +15,20 @@ const PlayButton = (props) => {
           console.log('%caudio played with button', 'color: green;')
         })
         .catch(function (err) {
-          console.log(err)
+          console.log('error catch:', err)
         })
     }
     return setButtonId('done-play');
   }
 
   const handlePlay = () => {
-    getLuna('luna-intro');
-     props.toggle = false;
-    setTimeout(() => {
-      'luna-intro'.currentTime = 0;
-      setButtonId('pulse-play')
-      getLuna('luna-next-step')
-    }, 10000).then(() => {
+   new Promise(() => {
+      setTimeout(getLuna('luna-intro'), 9000);
+      setButtonId('pulse-play');
+      return setTimeout(() => {
+        getLuna('luna-next-step')
+       }, 10000)
+   }).then(() => {
       return clearTimeout()
     })
   }

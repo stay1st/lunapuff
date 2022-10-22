@@ -5,14 +5,14 @@ div.container.home-page {
 .home-page {
 
     .text-zone {
-        margin-top: 50px;
+        margin-top: 30px;
         width: 40%;
         max-height: 90%;
     }
 
     h1 {
         color: #00ffc2;
-        font-size: 53px;
+        font-size: 7vh;
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
@@ -41,7 +41,7 @@ div.container.home-page {
         }
 
         img {
-            width: 22px;
+            max-width: 42px;
             margin-left: 20px;
             margin-right: 2px;
             opacity: 100;

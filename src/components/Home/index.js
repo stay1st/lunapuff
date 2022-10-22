@@ -39,29 +39,26 @@ const Home = (props) => {
     if (lunaPromise !== undefined) {
       lunaPromise
         .then((_) => {
-          console.log('%caudio played auto', 'color: green;')
+          setTimeout(() => {
+            playIntro('luna-next-step')
+            console.log('%caudio played auto', 'color: green;')
+          }, 10000)
         })
         .catch(function (error) {
-          return setToggle(false)
+          console.log(error)
+          setToggle(false)
         })
     }
   }, [])
 
   useEffect(() => {
-    setTimeout(() => {
-      playIntro('luna-intro')
-    }, 2000)
-    setTimeout(() => {
-      return setLetterClass('text-animate-hover')
-    }, 4000)
-    setTimeout(() => {
-      setPortId('port-id')
-      playIntro('luna-next-step')
-    }, 10000)
-    return () => {
-      playIntro.currentTime = 0
-      return clearTimeout()
-    }
+    setTimeout(setLetterClass('text-animate-hover', 4000))
+  new Promise(() => {
+    setTimeout(playIntro('luna-intro'), 2000);
+  }).then(() => {
+    return clearTimeout()
+  }, setPortId('port-id'))
+  clearTimeout()
   }, [playIntro])
 
   return (
@@ -98,12 +95,12 @@ const Home = (props) => {
               idx={17}
             />
           </h1>
-          <div className='home-description-div'>
+          <div className="home-description-div">
             <h2 id="description">{description}</h2>
           </div>
           <div className="btn-container">
             <Link to="/portfolio" className="btn" id={portId}>
-              <svg id={portId}>
+              <svg>
                 <rect
                   x="0"
                   y="0"

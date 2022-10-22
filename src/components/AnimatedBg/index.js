@@ -6,6 +6,7 @@ const AnimatedBg = () => {
   const canvas = document.getElementById('canvas-main')
   const ctx = canvas.getContext('2d');
   const {innerHeight, innerWidth} = WindowSize();
+  
   canvas.width = innerWidth
   canvas.height = innerHeight
 
@@ -118,7 +119,7 @@ function connect() {
       * (particlesArray[a].y - particlesArray[b].y));
       if ((canvas.width >= 1200 && canvas.height >= 1080) && distance) {
         if (distance < (canvas.height/2 * canvas.height/8000) * (canvas.width/2 * canvas.width/8000)){
-        opacityValue = 1 - (distance / .5)
+        ctx.opacityValue = 1 - (distance / .5)
         ctx.strokeStyle='rgb(0, 144, 212)';
         ctx.lineWidth = .5;
         ctx.beginPath();
@@ -128,7 +129,7 @@ function connect() {
         }
       } else {
       if (distance < (canvas.height * canvas.width/8000) * (canvas.width * canvas.height/8000)) {
-        opacityValue = 1 - (distance / .5)
+        ctx.opacityValue = 1 - (distance / .5)
         ctx.strokeStyle='rgb(0, 144, 212)';
         ctx.lineWidth = .5;
         ctx.beginPath();
