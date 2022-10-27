@@ -13,7 +13,10 @@ const Projects = () => {
             wrapperClass="htmlDrumMachine"
             distanceFactor={1.17}
           >
-            <iframe src="https://stay1st.github.io/drum-machine/" />
+            <iframe
+             src="https://stay1st.github.io/drum-machine/" 
+             onDoubleClick={<a href='https://stay1st.github.io/drum-machine/' alt='View drum-machine on Github'/>}
+             />
           </Html>
           <Text
             rotation-y={179}
@@ -31,7 +34,10 @@ const Projects = () => {
             wrapperClass="htmlJavascriptCalculator"
             distanceFactor={1.25}
           >
-            <iframe src="https://stay1st.github.io/javascript-calculator/" />
+            <iframe 
+              src="https://stay1st.github.io/javascript-calculator/" 
+              onDoubleClick={<a href='https://stay1st.github.io/drum-machine/' alt='View drum-machine on Github'/>}
+              />
           </Html>
           <Text
             rotation-y={179}
@@ -44,12 +50,15 @@ const Projects = () => {
           {/* Markdown Previewer Project */}
           <Html
             transform
-            rotation-y={179}
-            position={[-7, 1.5, 5]}
-            wrapperClass="htmlMarkdownPreviewer"
-            distanceFactor={1.25}
+            rotation-y={179} 
+            position={[-7, 1.5, 5]} 
+            wrapperClass="htmlMarkdownPreviewer" 
+            distanceFactor={1.25} 
           >
-            <iframe src="https://stay1st.github.io/markdown-previewer/" />
+            <iframe 
+              src="https://stay1st.github.io/markdown-previewer/" 
+              onDoubleClick={<a href='https://stay1st.github.io/drum-machine/' alt='View drum-machine on Github'/>}
+              />
           </Html>
           <Text
             rotation-y={179}
