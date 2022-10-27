@@ -1,22 +1,20 @@
 import './index.scss'
-import { ReactDOM } from 'react'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import cover from '../../assets/images/quote-generator.png'
+import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import * as THREE from 'three'
-import { ReactThreeFiber, ambientLight, orbitalControls } from '@react-three/fiber'
+import Scene from './Scene'
 
-export default function Portfolio() {
+
+
+const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
+    setTimeout(() => {
+      return setLetterClass('text-animate-hover')
     }, 2700)
-    return () => {
-      clearTimeout(timer)
-    }
   }, [])
 
   // const renderPortfolio = (projects) => {
@@ -42,23 +40,26 @@ export default function Portfolio() {
 
   return (
     <div className="container portfolio-page">
-      <h1 id="page-title">
-        <AnimatedLetters 
+      <h1 id="h1-heading">
+        <AnimatedLetters
           letterClass={letterClass}
           strArray={['P', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o']}
           idx={20}
         />
       </h1>
-      <Canvas>
-      <ambientLight intensity={0.1} />
-      <directionalLight color='red' position={[0, 0, 5]} />
-      <mesh>
-        <boxGeometry 
-        rotate={[1, 0, 0]} args={[2, 2, 2]} />
-        <meshStandardMaterial />
-        <axesHelper />
-      </mesh>
+      <div className='canvas-container'>
+      <Canvas 
+        camera={{ fov: 70}}>
+        <pointLight intensity={0.2} position={[-10, 25, 5]} color="#0090d4" />
+        <ambientLight intensity={0.1} />
+        <directionalLight color="#0090d4" position={[0, 0, 5]} />
+        <Suspense fallback={null}>
+          <Scene />
+          <OrbitControls />
+        </Suspense>
       </Canvas>
+      </div>
     </div>
   )
 }
+export default Portfolio

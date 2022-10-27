@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@react-three/drei": "^9.36.0",
+    "react-spring": "^9.5.5",
     "three": "^0.145.0"
   }
 }

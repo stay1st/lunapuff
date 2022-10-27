@@ -48,7 +48,7 @@ const Contact = () => {
             idx={18}
           />
         </h1>
-        <h3>Looking to create together? You can reach me here!</h3>
+        <h3 id='lets-talk'>Looking to meet up? Let's Talk!</h3>
         <div className="contact-form">
           <form ref={formReferance} onSubmit={send}>
             <ul>
@@ -100,6 +100,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      
+      <div className="map-wrap" id="map">
       <div className="info-map">
         Joshua Crawford,
         <br />
@@ -109,7 +111,6 @@ const Contact = () => {
         <br />
         (727) 642-0606
       </div>
-      <div className="map-wrap" id="map">
         <MapContainer
           center={[40.4406, -79.9959]} 
           zoom={12} 

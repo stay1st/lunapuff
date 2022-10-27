@@ -10,6 +10,7 @@ import {
   faCodePullRequest,
   faCodeCompare,
   faTriangleCircleSquare,
+  faCodeFork,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
@@ -78,6 +79,15 @@ const Sidebar = () => {
             to="/portfolio"
           >
             <FontAwesomeIcon icon={faCodeCompare} color="#a3a3a6" />
+          </NavLink>
+          <NavLink
+            onClick={handleMenuCloseHide}
+            exact="true" 
+            activeclassname="active" 
+            className="resume-link" 
+            to="/portfolio"
+          >
+            <FontAwesomeIcon icon={faCodeFork} color="#a3a3a6" />
           </NavLink>
         </nav>
         <ul>

@@ -32,42 +32,51 @@ const About = () => {
           />
         </h1>
         <h2>Introduction:</h2>
-        <p> Hey there, </p>
         <p>
-          My name is Joshua, but you can call me Josh. Thank you for taking the
-          time to visit <strong>lunapuff.com</strong>. I'm always looking to
-          improve and collaborate with others! So, please don't hesitate to
-          reach out.
+        I'm Josh, an aspiring Software Engineer living in Pittsburgh, PA. At age 9 I traded all of my games for a laptop, after that, I was hooked! Over the course of the last 20 years, I've successfully 
+        developed simple web pages and implemented technology solutions in business. The knowledge I've accrued generating multi-million dollar revenues. Systematically discovered
+        vulnerabilities in client/business life cycles, implemented solutions, and capitalizing on trending data.
         </p>
-        <p style={{ color: '#00ffc2' }}>For the aspiring developer:</p>
-        <p>
-          I know that it can be very difficult to learn all that is needed on your journey. If this is you, I'm
-          rooting for you and I'm a huge fan of your's! Hang in there, you can do it!
-        </p>
-        <p>I've compiled a list of helpful resources that helped me on this journey. My hopes is that
-        they will help you also! Happy Coding! 💻</p>
-        <p>
+        <h2>Languages / Libraries / Frameworks:</h2>
+          <p>ReactJS, VanillaJS, ReactThree-Fiber, ThreeJS, NodeJS, ExpressJS, EmailJS, D3, MongoDB, MySQL, HTML/CSS, SASS, JQuery, Bootstrap, and React Frameworks</p> 
+          <h2>Other Software:</h2>
+          <p>Adobe XD, Adobe Illustrator, Adobe Photoshop, Blender, WordPress, WebEx, Convertkit, </p>
           <ul>
+          <p>
             <li>
-              <strong>Highly reccommend:</strong> <a href='https://www.freecodecamp.org/'>FreeCodeCamp.org</a>, <a href='https://www.codesmith.io/'>CSX/Javascript-Workshops/Pair-Programming/Codesmith.io</a>, 
-              People also like <a href='https://www.theodinproject.com/theOdinProject.com'>The Odin Project</a>.
+              <strong>Favorite Resources:</strong> <a href='https://www.freecodecamp.org/'>FreeCodeCamp.org</a>, <a href='https://www.codesmith.io/'>CSX/Javascript-Workshops/Pair-Programming/Codesmith.io</a>, 
+              <a href='https://www.theodinproject.com/theOdinProject.com'>The Odin Project</a>.
             </li>
             <li>
-              <strong>Other Resources:</strong> MDN, W3 Schools, FontAwesome CDN, Github,
+              <strong>Documentation:</strong> MDN, W3 Schools, FontAwesome CDN, Github,
               Git CLI, Daily.dev, ThreeJS.org, Codewars, Leetcode, ThreeJS-Journey, ReactThree-Fiber, NPM, 
             </li>
-            <li>Helpful iPhone Applications:</li>
-            <ul>
-              <li>
-                Mimo, CodeAcademyGo, SoloLearn, RegEx Lab, Github,
-                TerminalCommands, VS Code Flash Cards, Scriptable, Codelet,
-                Coursera, Udacity, EdX, MeetUp, PluralSight, Youtube, Udemy,
-                Obsidian,{' '}
-              </li>
-            </ul>
+            </p>
           </ul>
-        </p>
-        <p></p>
+        {/* <h3>About me:</h3> 
+        The section below has never been publicly shared, but I'm presenting it in hopes to save a life. Like others have done for mine. This is for you baby Luna.
+        In a way to let you know truly who I am and where I started. My hope is that someone
+        that reads this can find empowerment through this short timeline, and understand that they can overcome almost any obstacle!
+        <p color='orange'>Here's the hard parts:</p>
+          <ul>
+            <li>Age NewBorn: Born in NY, Father almost causes me to be born blind - 2 sisters</li>
+            <li>Age 2: Not speaking; Mother gets me speech lessons</li>
+            <li>Age 4: Moved to Fort Myers, FL - affordability - 3 sisters 1 brothers</li>
+            <li>Age 6: Don't know when If I'll walk again. Six Months/ Mother nurses me back to health! I can walk!</li>
+            <li>Age 7: Mother was renting to own, house is foreclosed and we move to apt.</li>
+            <li>Age 8: Father leaves - 3 sisters 2 brothers</li>
+            <li>Age 9: 3 younger siblings re-homed to AR, eldest sister re-homed to TN, 2nd eldest sister and I re-homed to KS</li>
+            <li>Age 10: All 6 of us children move to Tampa, FL into a group home to be closer to our mother</li>
+            <li>Age 11: Group Home continues - - See mother weekend/month due to Group Home rules - There are 7 children now</li>
+            <li>Age 12: Father removes second youngest brother and I from group home to avoid childsupport. Youngest brother is 6 left alone in group home for another year. Girls don't can't see boys. 3 sisters still in</li>
+            <li>Age 15: Life was normal and okay from 12yr-15yr from step Mother & Family's Involvement. Made true impact!</li>
+            <li>Age 15: Step Mother seperates from Father</li>
+            <li>Age 16: </li>
+          </ul>
+          <ul>
+            <li>Born: Johnson City NY</li>
+          </ul>
+        </p> */}
         <span
           style={{
             color: 'grey',

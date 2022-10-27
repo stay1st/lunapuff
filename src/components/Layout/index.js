@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar'
-import Portfolio from '../Portfolio'
 import './index.scss'
-
+// Placing <Portfolio /> here renders it on top of everything.
 const Layout = () => {
   return (
     <div className="layout">
@@ -14,7 +13,6 @@ const Layout = () => {
           &lt;body&gt;
         </span>
         <Outlet />
-        <Portfolio />
         <span className="tags bottom-tags">
           &lt;/body&gt;
           <br />
