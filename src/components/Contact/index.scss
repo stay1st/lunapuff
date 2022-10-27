@@ -128,7 +128,6 @@
             position: inherit;
             display: inline-block;
             width: 100%;
-            max-width: 100vh;
             height: 80%;
         }
     }
@@ -203,7 +202,9 @@ div {
         }
 
         .leaflet-container {
-            margin-left: 0;
+            margin: 0;
+            justify-content: center;
+            align-content: center;
         }
 
         .info-map {

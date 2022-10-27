@@ -15,3 +15,8 @@
     height: 100%;
     opacity: 40%;
 }
+
+canvas {
+    -ms-touch-action: none;
+    touch-action: none;
+}

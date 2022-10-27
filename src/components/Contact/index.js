@@ -48,6 +48,11 @@ const Contact = () => {
             idx={18}
           />
         </h1>
+         {/* Desktop 2 x Monitor Computer Model */}
+     <primitive
+        position={[35, -11, -1.8]}
+        scale={2.5}
+      />
         <h3 id='lets-talk'>Looking to meet up? Let's Talk!</h3>
         <div className="contact-form">
           <form ref={formReferance} onSubmit={send}>
