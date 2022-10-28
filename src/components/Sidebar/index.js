@@ -85,7 +85,7 @@ const Sidebar = () => {
             exact="true" 
             activeclassname="active" 
             className="resume-link" 
-            to="/portfolio"
+            to="/resume"
           >
             <FontAwesomeIcon icon={faCodeFork} color="#a3a3a6" />
           </NavLink>

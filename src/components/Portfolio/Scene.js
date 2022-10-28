@@ -11,10 +11,9 @@ function Scene() {
   /**
    * Loaders
    */
-  const gltf = useLoader(GLTFLoader, '/models/cyberpunk_desk/scene.gltf')
   const env = useLoader(
     GLTFLoader,
-    '/models/modern_office_reception_baking/scene.gltf'
+    '/models/modern_office/modern_office_reception_baking.glb'
   )
 
   /**
@@ -48,7 +47,7 @@ function handleClickOnIntro() {
       {/* Boxed Scene Model */}
       <primitive object={env.scene} position={[23, -10, 0]} scale={6}>
       <Html 
-        position={[-4.1, 1.75, 0.02]}
+        position={[-4.1, 1.75, -.15]}
       >
         <div id='intro-text-div' onClick={handleClickOnIntro}>
           <h2 id='intro-to-click'>{`${introToStart}`}</h2>

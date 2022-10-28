@@ -24,18 +24,18 @@
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
-    background: rgba(82, 39, 3, 0.239);
+    background: rgba(160, 91, 41, 0.764);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 12px;
     animation: fadeIn 2s 1s both;
 
     &::after {
-        content: 'Look Around!';
-        font-size: 16px;
-        color: #202020;
+        content: 'To look Around!';
+        font-size: 18px;
+        color: #ffffff;
     }
 }
 
