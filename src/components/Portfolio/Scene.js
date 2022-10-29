@@ -19,18 +19,18 @@ function Scene() {
   /**
    * GUI / Debugging / Performance Monitoring
    */
-  const debuggingControls = useControls({
-    position: -2,
-    dpr: 1.5,
-  })
+  // const debuggingControls = useControls({
+  //   position: -2,
+  //   dpr: 1.5,
+  // })
 
   // Settings for resolution on renderer
   const [dpr, setDpr] = useState(1.5)
 
   /**
-   * Dragging 
+   * Orbital Camera instruction 
    */
-  const introToStart = 'Click/Drag';
+  const introToStart = 'Left_Click\rto close🖱️';
 
 function handleClickOnIntro() {
   const text = document.getElementById('intro-text-div')
@@ -43,18 +43,18 @@ function handleClickOnIntro() {
 
   return (
     <>
-      <Perf />
+      {/* Use  <Perf />  for GUI optimization metrics */}
       {/* Boxed Scene Model */}
       <primitive object={env.scene} position={[23, -10, 0]} scale={6}>
       <Html 
-        position={[-4.1, 1.75, -.15]}
+        position={[-4.16, 1.87, -.49]}
       >
         <div id='intro-text-div' onClick={handleClickOnIntro}>
           <h2 id='intro-to-click'>{`${introToStart}`}</h2>
         </div>
       </Html>
         <Suspense>
-          <PerformanceMonitor
+          <PerformanceMonitor 
             onIncline={() => setDpr(2)}
             onDecline={() => setDpr(1)}
             onChange={console.log('DPR Changed in Scene:', dpr)}

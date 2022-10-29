@@ -3,9 +3,6 @@ import { useSpring, animated, config } from "@react-spring/three";
 import { useFrame } from "@react-three/fiber";
 import React, { useState } from "react";
 
-import * as THREE from 'three'
-import { PlaneGeometry } from 'three';
-
 
 /**
  * planeFloor: rotate -90 degrees. Code 
@@ -32,6 +29,8 @@ import { PlaneGeometry } from 'three';
 // const rotateCounter90 = -90
 // planeGeometryFloor.rotation.x = 
 //   THREE.MathUtils.degToRad(initialFloorRotation.x + rotateCounter90);
+
+
 function ModelPlaceholder() {
 
     const myMesh = React.useRef();

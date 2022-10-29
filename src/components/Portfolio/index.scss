@@ -15,8 +15,21 @@
     }
     
 }
+
+div#about-portfolio-text {
+    color: white;
+    font-size: 1.75em;
+    width: 60%;
+}
+
+h4#user-exp-message {
+    padding: 4px;
+    background: #00ffc2;
+    color: black;
+}
+
 #intro-to-click {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
     color: #00ffc2;
 }
@@ -24,7 +37,7 @@
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
-    background: rgba(160, 91, 41, 0.764);
+    background: rgba(77, 9, 117, 0.764);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     width: 100%;
@@ -33,10 +46,24 @@
     animation: fadeIn 2s 1s both;
 
     &::after {
-        content: 'To look Around!';
+        content: 'Take a look around!';
         font-size: 18px;
         color: #ffffff;
     }
+}
+
+#gh-links-div {
+    margin-bottom: 50px;
+}
+
+a#project-links {
+        font-weight: 700;
+}
+#scroll-to-bottom,
+#scroll-to-bottom a,
+div#project-links a {
+    color:rgba(134, 17, 201, 0.764);
+    text-align: center;
 }
 
 canvas {
@@ -52,4 +79,14 @@ canvas {
     border: none;
     border-radius: 20px;
     background: #0000;
+}
+
+@media screen and (max-width: 1200px) {
+    div#about-portfolio-text {
+        width: auto;
+        padding-left: 18px;
+        padding-right: 18px;
+        justify-content: center;
+        align-content: center;
+    }
 }

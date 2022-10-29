@@ -31,11 +31,31 @@ const About = () => {
             idx={19}
           />
         </h1>
+        
         <h2>Introduction:</h2>
         <p>
-        I'm Josh, an aspiring Software Engineer living in Pittsburgh, PA. At age 9 I traded all of my games for a laptop, after that, I was hooked! Over the course of the last 20 years, I've successfully 
-        developed simple web pages and implemented technology solutions in business. The knowledge I've accrued generating multi-million dollar revenues. Systematically discovered
-        vulnerabilities in client/business life cycles, implemented solutions, and capitalizing on trending data.
+        I'm Josh, a 29 year old ENTJ-Capricorn 😂 who's working his way into becoming a Senior Software Engineer. From Tampa, FL currently living in Pittsburgh, PA. 
+        <h2>When my love for the Tech Industry started:</h2>
+        At age 6 I was taking apart all of my battery operated toys to try and understand how they worked, I drove my mother crazy with this by the way! At age 9 I traded all of my games for a laptop. After that, I was hooked! By age 14 I could fix any windows computer issue, and I started heavily using Adobe Photoshop to touch up images for photographers in FL. I enrolled 
+        a web design course in High School. When assigned projects, I would use Photoshop in tandem with Dreamweaver to design web pages. During that class, I was given the task of managing our high school's website alongside the teacher. I went to school in Hillsborough County, Florida. The 8th 
+        largest school district in the US. So, to me this was huge!
+        <h3>When I started utilizing Technology to generate revenue</h3>
+        <p>Around this time in High School, is when I started collecting broken 1st and 2nd generation iPhones to fix and sell. My two younger brothers and I ran other businesses when I was 17, making and selling modified gaming consoles, components, constrollers, games, etc. I was 17 at the time. I posted videos on youtube regarding some of these in 2010. Honestly, couldn't believe I found at least some of them still up, Haha.
+        Here is a link to one of them <a href='https://www.youtube.com/watch?v=fQlyCR3GSSE'>WAW lobby iso Xbox360</a></p>
+        <h2>A little about my history</h2>
+        <p>We had a rough childhood, with 8 brothers and sisters in the household. My brother and I had to become entrepreneurs early on in our teenage years to survive in our teenage years. I did not know this at the time, but all of these skills I was learning while not in school led me to be in a position to generate multiple 
+        great streams of income for others and myself. I attended college for Computer Engineering Technology, gained 54 credit hours before dropping out of the program. Right now, you may be thinking, "Why would I do that with only a semester to go for the A.S.?", and you'd have a point! I was paying out of pocket for school,
+        my online Shopify store was generating a good deal of business already, and I just had a child. With that said, I'm still considering doing it after my fianceé is done with Grad School.</p>
+        
+        <p>Until 5 months ago, I thought coding was the boring side of techology, but I had never done it besides simple HTML/CSS! But wow, I can't believe how mistaken I was to think that! Currently, I insert technology solutions into business sales cycles to generate substantial amounts of revenue. Over the last 11 years I've been in the sales/management industry, was flown across the US a few different times to train, manage, and develop offices. 
+        <h2>Why others have hired me, and why you should to!</h2>
+        <p>Recently, I've resigned from one of my roles in order to learn code as much as 
+        possible. You'll have to look very far and wide to find someone that can outwork me consistently. Over the last 5 months I've not skipped a day. Since the end of August I've been studying and coding 80-100 hours/wk. Not for any other reason other than how much I love this now. I just 
+        cannot believe I missed this. But then again, there wasn't anywhere near even half the resources there are now! Now, is always so much better than tomorrow or never. I'm here to stay, that's for sure.. 
+        </p>
+        </p>
+        <p>Career Highlights: Developed an inside sales office from $0 to a multi-million dollar a year location. Revamped offices with declining revenues. Generated multi-millions for start-up small-mid sized buisinesses. I'm deciding to become a Software Engineer because I truly enjoy it! Thanks for reading this, if you made it all the way down here! You are wonderful!!</p>
+        
         </p>
         <h2>Languages / Libraries / Frameworks:</h2>
           <p>ReactJS, VanillaJS, ReactThree-Fiber, ThreeJS, NodeJS, ExpressJS, EmailJS, D3, MongoDB, MySQL, HTML/CSS, SASS, JQuery, Bootstrap, and React Frameworks</p> 

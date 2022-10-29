@@ -64,7 +64,7 @@ const Projects = () => {
             rotation-y={179}
             font="/fonts/helvetica-neu.ttf"
             fontSize={0.3}
-            position={[-7, 2.8, 5]}
+            position={[-7, 2.8, 4.7]}
           >
             Markdown Previewer
           </Text>
